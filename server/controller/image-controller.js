@@ -1,7 +1,7 @@
 import grid from 'gridfs-stream';
 import mongoose from 'mongoose';
 
-const url = 'http://localhost:8000';
+const url = 'http://blog-app-final-api.vercel.app';
 
 
 let gfs, gridfsBucket;
