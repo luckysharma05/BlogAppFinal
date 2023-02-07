@@ -5,7 +5,7 @@ const storage = new GridFsStorage({
     url: `mongodb://lucky:lucky@cluster0-shard-00-00.sgml2.mongodb.net:27017,cluster0-shard-00-01.sgml2.mongodb.net:27017,cluster0-shard-00-02.sgml2.mongodb.net:27017/?ssl=true&replicaSet=atlas-vs8378-shard-0&authSource=admin&retryWrites=true&w=majority`,
     options: { useNewUrlParser: true },
     file: (request, file) => {
-        const match = ["image/png", "image/jpg"];
+        const match = ["image/png", "image/jpg", "image/jpeg"];
 
         if(match.indexOf(file.memeType) === -1) 
             return`${Date.now()}-blog-${file.originalname}`;
